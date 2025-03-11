@@ -17,6 +17,26 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* Membuat gambar tetap di tempat meskipun halaman di-scroll */
 }
+.user-id-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-id-container input {
+    width: 90%; /* Lebih besar agar mencolok */
+    max-width: 500px; /* Maksimal 500px supaya tetap responsif */
+    padding: 15px; /* Padding lebih besar supaya nyaman diketik */
+    font-size: 1.5rem; /* Ukuran font lebih besar */
+    border-radius: 10px; /* Border lebih melengkung agar modern */
+    border: 3px solid #00aaff; /* Border tebal dengan warna mencolok */
+    outline: none;
+    text-align: center;
+    background-color: #111; /* Warna input lebih gelap agar kontras */
+    color: #fff; /* Warna teks putih */
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.8); /* Efek glow biru */
+}
+
 
 .container {
     text-align: center;
