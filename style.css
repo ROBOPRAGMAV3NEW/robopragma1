@@ -1,0 +1,239 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Latar belakang hitam */
+    color: #fff; /* Teks putih */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw; /* Pastikan lebar penuh */
+    overflow: hidden; /* Mencegah scroll */
+    background-image: url('bg.gif'); /* Gambar latar belakang */
+    background-size: cover; /* Pastikan gambar memenuhi layar */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Membuat gambar tetap di tempat meskipun halaman di-scroll */
+}
+
+.container {
+    text-align: center;
+}
+
+.robot-container {
+  margin-bottom: 20px;
+}
+
+.robot {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Circular image */
+}
+
+.text-overlay {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.badges img {
+  width: 50px;
+  height: 50px;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00aaff; /* Blue color */
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+.buttons button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    margin: 10px auto;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.buttons button:hover {
+  background-color: #00aaff;
+  color: black;
+}
+
+.checkbox-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text horizontally */
+}
+
+.checkbox {
+    margin-right: 10px;
+    font-size: 20px;
+    user-select: none; /* Prevent text selection */
+}
+
+.checkbox:before {
+    content: '☐'; /* Default unchecked box */
+    color: #fff;
+}
+
+.checkbox-button.checked .checkbox:before {
+    content: '☑️'; /* Checked box (blue checkmark) */
+    color: #00aaff;
+}
+
+.scrambled-text {
+    margin: 20px 0;
+    font-family: monospace;
+}
+
+.activate-button {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #ffd700; /* Gold color */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.activate-button:hover {
+    background-color: #daa520;
+}
+
+.table-container {
+    margin-top: 50px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none; /* Initially hidden */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visual effect */
+    border-radius: 10px; /* Round the corners */
+    background-color: #000000;; /* Transparent background */
+    padding: 20px;
+}
+
+.table-container p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #00aaff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+}
+
+th {
+    background-color: #000000;;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #000000; /* Set table cells background to transparent */
+    color: #ffffff;
+}
+
+
+td[data-final] {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #e74c3c; /* Red color for the final percentage */
+}
+
+.loading-text {
+    color: #f39c12;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.cheat-text {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #3cff00;
+    text-align: center;
+    display: none;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.final-text {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #e5ff00;
+    text-align: center;
+    display: none;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
