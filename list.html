@@ -4,7 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Games - RoboPragma</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: auto;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .input-game, #newGameName, #newGameStatus {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-game-button, button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-game-button:hover, button:hover {
+            background-color: #218838;
+        }
+        .edit-button {
+            background-color: #ffc107;
+        }
+        .edit-button:hover {
+            background-color: #e0a800;
+        }
+        .delete-button {
+            background-color: #dc3545;
+        }
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,18 +88,13 @@
             </tbody>
         </table>
 
-        <h3>Change Game Status</h3>
-        <input type="text" class="input-game" id="gameName" placeholder="Enter Game Name" disabled>
-        <input type="number" class="input-game" id="gameStatus" placeholder="Enter New Status">
-        <button class="input-game-button" onclick="updateGameStatus()">Update Status</button>
+
+        <h3>Add New Game</h3>
+        <input type="text" id="newGameName" placeholder="Enter New Game Name">
+        <input type="number" id="newGameStatus" placeholder="Enter Status">
+        <button onclick="addNewGame()">Add Game</button>
     </div>
-    <h3>Add New Game</h3>
-<input type="text" id="newGameName" placeholder="Enter New Game Name">
-<input type="number" id="newGameStatus" placeholder="Enter Status">
-<button onclick="addNewGame()">Add Game</button>
 
-
-    <!-- Ensure that gameList.js is loaded -->
-    <script src="src/gameList.js"></script>
+    <script src="gameList.js"></script>
 </body>
 </html>
